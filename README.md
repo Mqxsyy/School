@@ -1,4 +1,4 @@
 # School
 
-TA-22E
-/n Gert Mägi
+TA-22E  
+Gert Mägi  
