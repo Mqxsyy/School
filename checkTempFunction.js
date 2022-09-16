@@ -1,11 +1,3 @@
-console.log(checkTemp(0))
-console.log(checkTemp(20))
-console.log(checkTemp(21))
-console.log(checkTemp(40))
-console.log(checkTemp(41))
-console.log(checkTemp(60))
-  
-// Function
 function checkTemp(Temp)
 {
   if (Temp <= 20)
