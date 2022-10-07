@@ -33,15 +33,21 @@ var tellimus = {
 	],
 };
 
+
+
 OrderSummary(tellimus);
 
-function OrderSummary(Order) {
+function OrderSummary(Order, RoundNumbers) {
 	let ObjectLength = Object.keys(Order["rows"]).length;
 	let TotalPrice = 0;
 
 	for (i = 0; i < ObjectLength; i++) {
 		let Item = Order["rows"][i];
-		let ItemPrice = Item["price"] * (1 + Item["vat"]);
+    let ItemPrice = Item["price"] * (1 + Item["vat"]);
+    
+    if (RoundNumbers)
+      ItemPrice = Math.round(ItemPrice * 100) / 100;
+  
 		TotalPrice += ItemPrice;
 
 		console.log(
